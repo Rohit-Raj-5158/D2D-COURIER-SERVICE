@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>D2D Courier - Your Door-to-Door Delivery Partner</title>
+    <!-- Bootstrap CSS -->
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="projectstyle.css">
+</head>
+<body>
+    <!-- Navigation bar -->
+    <header class="bg-dark text-white sticky-top">
+        <nav class="navbar navbar-expand-lg navbar-dark">
+            <div class="container">
+                <a class="navbar-brand" href="#">D2D Courier</a>
+                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarNav">
+                    <ul class="navbar-nav ml-auto">
+                        <li class="nav-item"><a class="nav-link" href="#services">Services</a></li>
+                        <li class="nav-item"><a class="nav-link" href="#pricing">Pricing</a></li>
+                        <li class="nav-item"><a class="nav-link" href="#contact">Contact Us</a></li>
+                        <li class="nav-item"><a class="nav-link" href="#" id="login-link">Login</a></li>
+                    </ul>
+                    <a href="#track-order" class="btn btn-success ml-3">Track Order</a>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <main class="container">
+        <!-- Track Order Section -->
+        <section id="track-order" class="my-5 text-center">
+            <h2 style="color: #0C0C0C;" ><b>Track Order</b></h2>
+            <form id="track-form" class="form-inline justify-content-center">
+                <div class="form-group mb-2">
+                    <label for="order-id" class="sr-only">Order ID</label>
+                    <input type="text" class="form-control" id="order-id" name="order-id" placeholder="Enter Order ID" required>
+                </div>
+                <button type="submit" class="btn btn-primary ml-2 mb-2" id="track-button">Track</button>
+            </form>
+            <div id="order-status" class="mt-3"></div>
+        </section>
+
+        <!-- Hero Section -->
+        <section id="hero" class="text-center py-5">
+            <div class="hero-content">
+                <h2 id="text-dark" style="color: white;">Your Package, Our Priority</h2>
+                <p style="color: white;">Delivering Trust</p>
+                <a href="#track-order" class="btn btn-primary">Get Started</a>
+            </div>
+        </section>
+
+        <!-- Services Section -->
+        <section id="services" class="my-5">
+            <h2 class="text-center" style="color: white;">Our Services</h2>
+            <div class="row">
+                <div class="col-md-4 text-center">
+                    <div class="service-box card p-3">
+                        <img src="door to door.jpeg" alt="Courier Delivery" class="card-img-top">
+                        <div class="card-body">
+                            <h3>Door-to-Door Delivery</h3>
+                            <p>Quick and hassle-free delivery from your doorstep to your destination.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4 text-center">
+                    <div class="service-box card p-3">
+                        <img src="real time.jpeg" alt="Tracking System" class="card-img-top" height="150px">
+                        <div class="card-body">
+                            <h3>Real-Time Tracking</h3>
+                            <p>Track your package in real-time and stay informed of every step.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4 text-center">
+                    <div id="rate" class="service-box card p-3">
+                        <img src="Affordable rate.jpeg" alt="Affordable Rates" class="card-img-top" >
+                        <div class="card-body">
+                            <h3>Affordable Rates</h3>
+                            <p>Competitive pricing for both local and international deliveries.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Pricing Section -->
+        <section id="pricing" class="my-5 text-center">
+            <h2 style="color: white;">Pricing</h2>
+            <div class="row">
+                <div class="col-md-6">
+                    <div class="pricing-box card p-3">
+                        <h3>Domestic Deliveries</h3>
+                        <p>Starting at just $5 per parcel within city limits*.</p>
+                    </div>
+                </div>
+                <div class="col-md-6">
+                    <div class="pricing-box card p-3">
+                        <h3>International Deliveries</h3>
+                        <p>Affordable rates starting at $20 for global shipping*.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Contact Section -->
+        <section id="contact" class="bg-dark text-white text-center py-5">
+            <h2>Contact Us</h2>
+            <p>Email: support@d2dcourier.com</p>
+            <p>Phone: +91 9876753610</p>
+        </section>
+
+        <!-- Login Modal -->
+        <div class="login-modal" id="loginModal">
+            <div class="login-container">
+                <span class="close-button" id="closeLogin">&times;</span>
+                <h2>Login to D2D Courier</h2>
+                <form id="loginForm" onsubmit="return validateForm()">
+                    <label for="username">Username</label>
+                    <input type="text" id="username" name="username" required style="border: 2px solid black;">
+    
+                    <label for="password">Password</label>
+                    <input type="password" id="password" name="password" required style="border: 2px solid black;">
+    
+                    <p class="error" id="error-message">Please fill in all fields.</p>
+    
+                    <button type="submit">Login</button>
+                </form>
+                <p class="signup-link">Don't have an account? <a href="#signup">Sign up here</a></p>
+            </div>
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-secondary text-white text-center py-3">
+        <p>&copy; 2024 D2D Courier. All rights reserved.</p>
+    </footer>
+
+    <!-- Bootstrap and jQuery Scripts -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <script src="Projectlogic.js"></script>
+</body>
+</html>

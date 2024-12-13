@@ -1,0 +1,297 @@
+/* Base styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Roboto', sans-serif;
+}
+
+body {
+    color: #333;
+    line-height: 1.6;
+}
+
+/* Navigation bar */
+header {
+    background-color: #2c3e50;
+    padding: 1rem 0;
+    color: #fff;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+header .logo h1 {
+    color: #ecf0f1;
+}
+
+nav {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 90%;
+    max-width: 1200px;
+    margin: auto;
+}
+
+.nav-links {
+    list-style: none;
+    display: flex;
+    gap: 1.5rem;
+}
+
+.nav-links a {
+    color: #ecf0f1;
+    text-decoration: none;
+    font-weight: 500;
+    transition: color 0.3s ease;
+}
+
+.nav-links a:hover {
+    color: #1abc9c;
+}
+
+.btn-book {
+    background-color: #1abc9c;
+    padding: 0.6rem 1.2rem;
+    color: #fff;
+    border-radius: 5px;
+    font-weight: bold;
+    text-decoration: none;
+    transition: background-color 0.3s ease;
+}
+
+.btn-book:hover {
+    background-color: #16a085;
+}
+
+/* Hero Section */
+#hero {
+    /* background: #ecf0f1; */
+    padding: 2rem 1rem;
+    text-align: center;
+    position: relative;
+    background-color: #ffffff00;
+}
+
+#text-dark{
+    color: white;
+}
+.hero-content {
+    max-width: 900px;
+    margin: auto;
+}
+
+#background img {
+    width: 100%;
+    border-radius: 10px;
+}
+
+#hero h2 {
+    font-size: 2rem;
+    margin-top: 1.5rem;
+    color: #34495e;
+}
+
+#hero p {
+    color: #666;
+    margin: 1rem 0;
+}
+
+.btn-cta {
+    background-color: #3498db;
+    color: #fff;
+    padding: 0.6rem 1.4rem;
+    border-radius: 5px;
+    font-weight: bold;
+    text-decoration: none;
+    transition: background-color 0.3s ease;
+}
+
+.btn-cta:hover {
+    background-color: #2980b9;
+}
+
+/* Sections */
+section {
+    padding: 2rem 1rem;
+    text-align: center;
+}
+
+#services, #pricing {
+    /* background: #f8f9fa; */
+    background-color: transparent;
+    padding: 3rem 1rem;
+}
+
+main{
+        background-image: url('background.webp');
+        background-size: cover;
+        background-position: center;
+        background-attachment: fixed;
+        padding: 3rem 1rem;   
+}
+
+
+.services-container, .pricing-box {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.service-box {
+    max-width: 300px;
+    margin: 1rem;
+    padding: 1rem;
+    background-color: #fff;
+    border: 1px solid #e1e1e1;
+    border-radius: 10px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.service-box img {
+    height: 100px;
+    width: 100px;
+    margin: 0 auto;
+}
+
+#contact {
+    background-color: #2c3e50;
+    color: #fff;
+    padding: 2rem 1rem;
+}
+
+footer {
+    background-color: #34495e;
+    color: #fff;
+    text-align: center;
+    padding: 1rem;
+}
+
+/* Login Modal */
+.login-modal {
+    display: none;
+    position: fixed;
+    z-index: 1000;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.7);
+    justify-content: center;
+    align-items: center;
+}
+
+.login-container {
+    background: #fff;
+    padding: 2rem;
+    max-width: 400px;
+    width: 90%;
+    border-radius: 8px;
+    box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.3);
+    position: relative;
+    text-align: center;
+    margin: 0 auto;
+    margin-top: 80px;
+}
+
+.close-button {
+    position: absolute;
+    top: 10px;
+    right: 15px;
+    font-size: 1.5rem;
+    cursor: pointer;
+    color: #333;
+}
+
+.login-container h2 {
+    color: #34495e;
+    margin-bottom: 1.5rem;
+    margin-top: 50px;
+}
+
+label {
+    display: block;
+    text-align: left;
+    font-weight: 500;
+    color: #555;
+    margin: 0.5rem 0 0.3rem;
+}
+
+input[type="text"],
+input[type="password"] {
+    width: 100%;
+    padding: 0.6rem;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    margin-bottom: 1rem;
+    font-size: 1rem;
+    color: #333;
+}
+
+button[type="submit"] {
+    width: 100%;
+    background-color: #1abc9c;
+    color: #fff;
+    padding: 0.8rem;
+    border-radius: 5px;
+    font-size: 1rem;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+button[type="submit"]:hover {
+    background-color: #16a085;
+}
+
+.error {
+    color: #e74c3c;
+    font-size: 0.9rem;
+    display: none;
+    margin-bottom: 1rem;
+}
+
+.signup-link {
+    margin-top: 1rem;
+    font-size: 0.9rem;
+}
+
+.signup-link a {
+    color: #3498db;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.signup-link a:hover {
+    text-decoration: underline;
+}
+/* Styling for the Track button */
+#track-button {
+    padding: 5px 10px;  /* Adjust the button size */
+    font-size: 18px;  /* Adjust the font size */
+    background-color: hwb(193 22% 8%);  /* Button color */
+    color: white;  /* Text color */
+    border: none;  /* Remove border */
+    border-radius: 2px;  /* Rounded corners */
+    cursor: pointer;  /* Pointer cursor on hover */
+    transition: background-color 0.3s ease;  /* Smooth transition for color change */
+    width: 20%;
+}
+
+/* Hover effect for the Track button */
+#track-button:hover {
+    background-color: hsl(200, 77%, 56%);  /* Darker blue on hover */
+}
+
+
+
+#track-order{
+    width: 40%;
+    margin: 0 auto;
+    color: white;
+}
+
+#rate{
+    height: 341.3px;
+}

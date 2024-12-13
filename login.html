@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>D2D Courier - Login</title>
+    <link href="styles.css" rel="stylesheet">
+</head>
+<body>
+
+    <!-- Login Page -->
+    <div class="login-container">
+        <h2>Login to D2D Courier</h2>
+        <form id="loginForm" onsubmit="return validateForm()">
+            <label for="username">Username</label>
+            <input type="text" id="username" name="username" required>
+
+            <label for="password">Password</label>
+            <input type="password" id="password" name="password" required>
+
+            <p class="error" id="error-message">Please fill in all fields.</p>
+
+            <button type="submit">Login</button>
+        </form>
+        <p class="signup-link">Don't have an account? <a href="#signup">Sign up here</a></p>
+    </div>
+
+    <script src="login.js"></script>
+    
+</body>
+</html>
